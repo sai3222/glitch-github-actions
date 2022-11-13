@@ -17,3 +17,12 @@ jobs:
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
             - Created by [create-or-update-comment][1]
+  comment-with-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create comment with api
+        run: |
+          gh api -X POST \
+          ## WE HAVE SOME MORE DATA IN THIS COMMENT##
+        
+  

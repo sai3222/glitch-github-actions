@@ -1,0 +1,11 @@
+name: this is my new file
+on:
+  issues:
+    types: [opened]
+jobs:
+  comment-with-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This "dump github xontext"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
